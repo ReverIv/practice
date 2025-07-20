@@ -1,72 +1,33 @@
 <!doctype html>
 <html lang="ru">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
-    <title>Продукты</title>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Контакты</title>
     <style>
         .white-section {
             background-color: white;
             padding: 60px 0;
         }
-
-        .gray-section {
-            background-color: #f8f9fa;
-            padding: 60px 0;
-        }
-
-        .image-text-container {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin: 0 auto;
-            max-width: 1200px;
-            padding: 0 20px;
-        }
-
-        .image-text-container img {
-            width: 500px;
-            height: 500px;
-            object-fit: cover;
-        }
-
-        @media (max-width: 992px) {
-            .image-text-container {
-                flex-direction: column;
-            }
-
-            .image-text-container img {
-                width: 100%;
-                height: auto;
-            }
-        }
     </style>
-    <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
     <div class="container">
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a href="{{url_for('main_page')}}"
-                        class="nav-link {% if request.endpoint == 'main_page' %}active{% endif %}"
-                        aria-current="page">Главная</a>
+                    <a href="index.html" class="nav-link active" aria-current="page">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('services')}}"
-                        class="nav-link {% if request.endpoint == 'services' %}active{% endif %}">Сервисы</a>
+                    <a href="services.html" class="nav-link">Сервисы</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('products')}}"
-                        class="nav-link {% if request.endpoint == 'products' %}active{% endif %}">Продукты</a>
+                    <a href="products.html" class="nav-link">Продукты</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('contacts')}}"
-                        class="nav-link {% if request.endpoint == 'contacts' %}active{% endif %}">Контакты</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
                 </li>
             </ul>
         </header>
@@ -76,47 +37,38 @@
         <div class="contacts__title" style="margin: 100px;">
             <h1 style="font-size: 63px;">Контакты</h1>
         </div>
-
         <div class="contacts__description" style="margin: 100px;">
             <p class=" wb">E-mail:</p>
             <a href="mailto:info@inthemelab.com">
-                <span class="p" itemprop="email">info@inthemelab.com</span> — по вопросам
-                сотрудничества, <br>
+                <span class="p" itemprop="email">info@inthemelab.com</span> — по вопросам сотрудничества, <br>
                 консультаций и технической поддержки
             </a>
             <a href="mailto:info@inthemelab.com">
-                <span class="p" itemprop="email">hr@inthemelab.com</span> — по вопросам
-                трудоустройства
+                <span class="p" itemprop="email">hr@inthemelab.com</span> — по вопросам трудоустройства
             </a>
         </div>
-
         <div class="contacts__description" style="margin: 100px;">
             <p class="wb">Телефон:</p>
             <a href="tel:+7 (495) 106-21-24">
                 <span class="p" itemprop="telephone">8 (495) 106-21-24</span> — отдел продаж
             </a>
         </div>
-
         <div class="contacts__offices" style="margin: 100px;">
             <div class="contacts__office active" data-id="0">
                 <p class="wsb">Офис в Чебоксарах</p>
                 <div class="contacts__button"></div>
             </div>
         </div>
-
         <div class="contacts__column" style="margin: 100px;">
             <div class="contacts__map active">
                 <div class="contacts__banner">
-                    <img src="https://inthemelab.com/assets/img/contacts/banner_cheboksary.png"
-                        alt="Офис INTHEME LAB в Чебоксарах" itemprop="image">
+                    <img src="https://inthemelab.com/assets/img/contacts/banner_cheboksary.png" alt="Офис INTHEME LAB в Чебоксарах" itemprop="image">
                 </div>
                 <div class="contacts__contact">
                     <p class="wb cb-1" itemprop="name">INTHEME LAB в Чебоксарах</p>
                     <p class="wsb">Адрес</p>
                     <div itemprop="address" itemscope="" itemtype="http://schema.org/PostalAddress">
-                        <p><span class="p" itemprop="postalCode">428022</span>, <span class="p"
-                                itemprop="addressLocality">г. Чебоксары</span>, <span class="p"
-                                itemprop="streetAddress">ул. Гагарина 55, 4 этаж, офис 403</span></p>
+                        <p><span class="p" itemprop="postalCode">428022</span>, <span class="p" itemprop="addressLocality">г. Чебоксары</span>, <span class="p" itemprop="streetAddress">ул. Гагарина 55, 4 этаж, офис 403</span></p>
                         <p class="wsb">Номер телефона</p>
                         <a href="tel:+78352709022"><span class="p" itemprop="telephone">+7 (495) 106-21-24</span></a>
                     </div>
@@ -129,20 +81,19 @@
         <footer class="py-3 my-4" style="color: black;">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item">
-                    <a href="{{url_for('main_page')}}" class="nav-link px-2 text-body-secondary"
-                        style="color: black;">Главная</a>
+                    <a href="index.html" class="nav-link px-2 text-body-secondary" style="color: black;">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('services')}}" class="nav-link px-2 text-body-secondary">Сервисы</a>
+                    <a href="services.html" class="nav-link px-2 text-body-secondary">Сервисы</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('products')}}" class="nav-link px-2 text-body-secondary">Продукты</a>
+                    <a href="products.html" class="nav-link px-2 text-body-secondary">Продукты</a>
                 </li>
-                <li class="nav-item"><a href="{{url_for('contacts')}}"
-                        class="nav-link px-2 text-body-secondary">Контакты</a>
+                <li class="nav-item"><a href="contacts.html" class="nav-link px-2 text-body-secondary">Контакты</a>
                 </li>
             </ul>
             <p class="text-center text-body-secondary">© 2025 Inthem Lab , Inc</p>
         </footer>
     </section>
 </body>
+</html>
