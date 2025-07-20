@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <title>Сервисы</title>
+    <style>
+        .white-section {
+            background-color: white;
+            padding: 60px 0;
+        }
+
+        .gray-section {
+            background-color: #f8f9fa;
+            padding: 60px 0;
+        }
+
+        .image-text-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin: 0 auto;
+            max-width: 1200px;
+            padding: 0 20px;
+        }
+
+        .image-text-container img {
+            width: 500px;
+            height: 500px;
+            object-fit: cover;
+        }
+
+        @media (max-width: 992px) {
+            .image-text-container {
+                flex-direction: column;
+            }
+
+            .image-text-container img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                    <a href="{{url_for('main_page')}}"
+                        class="nav-link {% if request.endpoint == 'main_page' %}active{% endif %}"
+                        aria-current="page">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('services')}}"
+                        class="nav-link {% if request.endpoint == 'services' %}active{% endif %}">Сервисы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('products')}}"
+                        class="nav-link {% if request.endpoint == 'products' %}active{% endif %}">Продукты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('contacts')}}"
+                        class="nav-link {% if request.endpoint == 'contacts' %}active{% endif %}">Контакты</a>
+                </li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="container">
+        <h1 class="text-center my-4">
+            <strong>
+                Наши сервисы
+            </strong>
+        </h1>
+    </div>
+
+    <section class="white-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/audit.png">
+            <div class="text-content">
+                <h3>Аудит</h3>
+                <p style="color: black;">Анализ существующих процессов и ИТ-решений на предприятии, позволяющий оценить
+                    эффективную работу для
+                    достижения целей или задач организации.</p>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="gray-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/support.png">
+            <div class="text-content">
+                <h3>Поддержка</h3>
+                <p style="color: black;">Оказание консультационных и технологических услуг по поддержке процессов
+                    заказчика
+                    существующего функционала программно-аппаратных комплексов и ИТ-систем.<br>
+                    Выстраивание многоуровневой поддержки: 1-я, 2-я и 3-я линия, круглосуточно, 365 дней в году, а также
+                    оказание поддержки вендора.
+                </p>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/outstuffing.png">
+            <div class="text-content">
+                <h3>Аутстаффинг</h3>
+                <p style="color: black;">
+                    Компания-аутстаффер не ведёт никакой деятельности, но она исполняет все функции работодателя:
+                    выплачивает заработную плату, платит налоги, ведет кадровый учет, взаимодействует с государственными
+                    органами и так далее.
+                </p>
+                <p class="wb " style="color: black;">
+                    Когда поможет аутстаффинг:
+                </p>
+                <div class="intro__points " style="color: black;">
+                    <p>1. организация команды под проект</p>
+                    <p>2. усиление компании узкопрофильными экспертами</p>
+                    <p>3. найм дополнительного персонала во время повышенной нагрузки на специалистов</p>
+                    <p>4. замена штатного работника на период отпуска или больничного</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gray-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/outsourcing.png">
+            <div class="text-content">
+                <h3>IT - Аутсорсинг</h3>
+                <p style="color: black;">Использование внешнего поставщика услуг в вопросах сопровождения и эксплуатации
+                    ИТ
+                    инфраструктуры.<br>
+                    Данный сервис позволяет менеджменту компании Заказчика сконцентрироваться на решении основных
+                    бизнес-задач. Поставщик сервиса самостоятельно выстроит процессы, необходимые для функционирования
+                    систем и приложений с заданными параметрами качества.
+                </p>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/learning.png">
+            <div class="text-content">
+                <h3>Центр обучения в сфере айти</h3>
+                <p style="color: black;">Оказание услуг по обучению специалистов по ИТ-решениям различных вендоров.
+                    Обучение
+                    корпоративных и частных клиентов. Возможность удаленного обучения из любой точки мира.
+                </p>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gray-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/design.png">
+            <div class="text-content">
+                <h3>Проектирование</h3>
+                <p style="color: black;">Комплекс мер, направленных на создание технического описания программного
+                    продукта.
+                    Проектирование предполагает увидеть возможности и функционал программного продукта до начала
+                    разработки,
+                    а также понять алгоритм действий.
+                </p>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="white-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/development.png">
+            <div class="text-content">
+                <h3>Заказная разработка</h3>
+                <p style="color: black;">Выполнение заказов на разработку различных программных продуктов по
+                    распространенным методологиям. Выполнение реализации происходит как самостоятельными командами, так
+                    и
+                    может включать специалистов со стороны заказчика.
+                </p>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gray-section">
+        <div class="image-text-container">
+            <img src="https://inthemelab.com/assets/img/services/banners/metodology.png">
+            <div class="text-content">
+                <h3>Анализ и моделирование бизнес-процессов</h3>
+                <p style="color: black;">
+                    Воспользуйтесь сервисом для разработки моделей разных бизнес-процессов. Методология позволяет
+                    настраивать последовательность операций, количество объектов и взаимосвязь элементов. Выявляйте
+                    риски до
+                    запуска проекта и повышайте эффективность деятельности компании.
+                </p>
+                <p class="wb " style="color: black;">
+                    Для чего подойдет сервис бизнес-методологии:
+                </p>
+                <div class="intro__points " style="color: black;">
+                    <p>1. перестройка систем внутри компании</p>
+                    <p>2. тестирование инструментов продаж или обработки заказа</p>
+                    <p>3. моделирование запуска нового продукта</p>
+                    <p>4. планирование бюджета для распределения ресурсов</p>
+                    <p>5. назначение полномочий и установка правил для регламентации процессов.</p>
+                </div>
+                <div class="mt-3">
+                    <button class="btn btn-primary d-inline-flex align-items-center" type="button">
+                        Связаться
+                        <svg class="bi ms-1" width="20" height="20" aria-hidden="true">
+                            <use xlink:href="#arrow-right-short"></use>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-section">
+        <footer class="py-3 my-4" style="color: black;">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item">
+                    <a href="{{url_for('main_page')}}" class="nav-link px-2 text-body-secondary"
+                        style="color: black;">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('services')}}" class="nav-link px-2 text-body-secondary">Сервисы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{{url_for('products')}}" class="nav-link px-2 text-body-secondary">Продукты</a>
+                </li>
+                <li class="nav-item"><a href="{{url_for('contacts')}}"
+                        class="nav-link px-2 text-body-secondary">Контакты</a>
+                </li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2025 Inthem Lab , Inc</p>
+        </footer>
+    </section>
+</body>
+
+</html>
