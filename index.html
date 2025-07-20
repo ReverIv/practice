@@ -1,19 +1,16 @@
 <!doctype html>
 <html lang="ru">
-
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+    <link rel="stylesheet" href="css/main.css">
     <title>InthemLab</title>
     <style>
         .white-section {
             background-color: white;
             padding: 60px 0;
         }
-
         .feedback-section {
             max-width: 600px;
             margin: 40px auto;
@@ -22,22 +19,18 @@
             border-radius: 10px;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         }
-
         .feedback-title {
             text-align: center;
             margin-bottom: 25px;
             color: #333;
         }
-
         .form-group {
             margin-bottom: 20px;
         }
-
         .form-control {
             padding: 12px;
             border-radius: 5px;
         }
-
         .btn-submit {
             width: 100%;
             padding: 12px;
@@ -45,27 +38,21 @@
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <header class="d-flex justify-content-center py-3">
             <ul class="nav nav-pills">
                 <li class="nav-item">
-                    <a href="{{url_for('main_page')}}"
-                        class="nav-link {% if request.endpoint == 'main_page' %}active{% endif %}"
-                        aria-current="page">Главная</a>
+                    <a href="index.html" class="nav-link active" aria-current="page">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('services')}}"
-                        class="nav-link {% if request.endpoint == 'services' %}active{% endif %}">Сервисы</a>
+                    <a href="services.html" class="nav-link">Сервисы</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('products')}}"
-                        class="nav-link {% if request.endpoint == 'products' %}active{% endif %}">Продукты</a>
+                    <a href="products.html" class="nav-link">Продукты</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('contacts')}}"
-                        class="nav-link {% if request.endpoint == 'contacts' %}active{% endif %}">Контакты</a>
+                    <a href="contacts.html" class="nav-link">Контакты</a>
                 </li>
             </ul>
         </header>
@@ -107,12 +94,9 @@
     <div class="conainer">
         <h1 style="text-align: center;">Преимущества компании INTHEME LAB</h1>
         <ul>
-            <li>Оптимизацияс AI-технологиями: следим за инновациями в консалтинге – применяем AI для моделирования
-                логистических процессов и решения сложных задач, сокращая затраты клиентам.</li>
-            <li>Компетентная команда: объединили консалтинг и 20-летний опыт сотрудничества специалистов с крупнейшими
-                мировыми вендорами и компаниями СНГ в области логистики.</li>
-            <li>Гарантия качества: имеем сертификат соответствия ISO 9001-2015 и строго контролируем соблюдение
-                стандартов. Выполняем обязательства по реализованным проектам согласно договору.</li>
+            <li>Оптимизацияс AI-технологиями: следим за инновациями в консалтинге – применяем AI для моделирования логистических процессов и решения сложных задач, сокращая затраты клиентам.</li>
+            <li>Компетентная команда: объединили консалтинг и 20-летний опыт сотрудничества специалистов с крупнейшими мировыми вендорами и компаниями СНГ в области логистики.</li>
+            <li>Гарантия качества: имеем сертификат соответствия ISO 9001-2015 и строго контролируем соблюдение стандартов. Выполняем обязательства по реализованным проектам согласно договору.</li>
         </ul>
     </div>
 
@@ -120,22 +104,19 @@
         <footer class="py-3 my-4" style="color: black;">
             <ul class="nav justify-content-center border-bottom pb-3 mb-3">
                 <li class="nav-item">
-                    <a href="{{url_for('main_page')}}" class="nav-link px-2 text-body-secondary"
-                        style="color: black;">Главная</a>
+                    <a href="index.html" class="nav-link px-2 text-body-secondary" style="color: black;">Главная</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('services')}}" class="nav-link px-2 text-body-secondary">Сервисы</a>
+                    <a href="services.html" class="nav-link px-2 text-body-secondary">Сервисы</a>
                 </li>
                 <li class="nav-item">
-                    <a href="{{url_for('products')}}" class="nav-link px-2 text-body-secondary">Продукты</a>
+                    <a href="products.html" class="nav-link px-2 text-body-secondary">Продукты</a>
                 </li>
-                <li class="nav-item"><a href="{{url_for('contacts')}}"
-                        class="nav-link px-2 text-body-secondary">Контакты</a>
+                <li class="nav-item"><a href="contacts.html" class="nav-link px-2 text-body-secondary">Контакты</a>
                 </li>
             </ul>
             <p class="text-center text-body-secondary">© 2025 Inthem Lab , Inc</p>
         </footer>
     </section>
 </body>
-
 </html>
